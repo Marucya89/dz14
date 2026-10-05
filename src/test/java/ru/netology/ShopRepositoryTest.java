@@ -39,4 +39,17 @@ class ShopRepositoryTest {
         () -> repo.remove(1234));
     }
 
+    @Test
+    public void testGettersAndSetters() {
+        Product product = new Product(1, "Test Product", 100);
+        assertEquals(1, product.getId());
+        assertEquals("Test Product", product.getTitle());
+        assertEquals(100, product.getPrice());
+
+        product.setTitle("New Title");
+        product.setPrice(150);
+        assertEquals("New Title", product.getTitle());
+        assertEquals(150, product.getPrice());
+    }
+
 }
